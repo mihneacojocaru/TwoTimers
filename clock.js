@@ -7,21 +7,6 @@ var s = document.getElementById("seconds");
 
 var startTimer = null;
 
-start.addEventListener("click", () => {
-  function startInterval() {
-    startTimer = setInterval(timer, 1000);
-  }
-  startInterval();
-});
-
-reset.addEventListener("click", () => {
-  h.value = 0;
-  m.value = 5;
-  s.value = 0;
-
-  clearInterval(startTimer);
-});
-
 function timer() {
   if (h.value == 0 && m.value == 0 && s.value == 0) {
     h.value = 0;
@@ -38,3 +23,20 @@ function timer() {
   }
   return;
 }
+
+start.addEventListener("click", () => {
+  function startInterval() {
+    startTimer = setInterval(timer, 1000);
+  }
+  startInterval();
+});
+
+reset.addEventListener("click", () => {
+  h.value = 0;
+  m.value = 5;
+  s.value = 0;
+
+  clearInterval(startTimer);
+});
+
+

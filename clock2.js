@@ -68,7 +68,6 @@ function init() {
 
 function startTimer() {
     interval = setInterval(() => {
-
         if (pause) return;
         totalSeconds--;
         updateInputs();
@@ -84,6 +83,7 @@ function stopTimer() {
 }
 
 function updateInputs() {
+    
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
